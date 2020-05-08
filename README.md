@@ -1,2 +1,2 @@
-# jadaptive-legacy-diagnostics
-A diagnostic server for the Maverick Legacy APIs
+# jadaptive-legacy-server
+A deployable server for the Maverick Legacy APIs

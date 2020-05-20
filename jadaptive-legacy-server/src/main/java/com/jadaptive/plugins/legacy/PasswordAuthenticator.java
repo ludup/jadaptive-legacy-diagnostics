@@ -15,6 +15,7 @@ import com.jadaptive.api.permissions.PermissionService;
 import com.jadaptive.api.tenant.TenantService;
 import com.jadaptive.api.user.User;
 import com.jadaptive.api.user.UserService;
+import com.jadaptive.api.user.UserUtils;
 import com.maverick.sshd.Connection;
 import com.maverick.sshd.PasswordAuthenticationProvider;
 import com.maverick.sshd.platform.PasswordChangeException;
@@ -56,7 +57,7 @@ public class PasswordAuthenticator extends PasswordAuthenticationProvider {
 					return false;
 				}
 				
-				if(success && user.getPasswordChangeRequired()) {
+				if(success && UserUtils.getPasswordChangeRequired(user)) {
 					try {
 						permissionService.assertAnyPermission( 
 								UserService.CHANGE_PASSWORD_PERMISSION,

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.jadaptive</groupId>
-		<artifactId>jadaptive-legacy-diagnostics</artifactId>
+		<artifactId>jadaptive-legacy</artifactId>
 		<relativePath>..</relativePath>
 		<version>0.0.2-SNAPSHOT</version>
 	</parent>

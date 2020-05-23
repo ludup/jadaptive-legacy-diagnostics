@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.jadaptive.api.app.ApplicationProperties;
-import com.jadaptive.api.entity.EntityException;
+import com.jadaptive.api.entity.ObjectException;
 import com.jadaptive.api.permissions.AccessDeniedException;
 import com.jadaptive.api.permissions.PermissionService;
 import com.jadaptive.api.tenant.TenantService;
@@ -74,7 +74,7 @@ public class PasswordAuthenticator extends PasswordAuthenticationProvider {
 			} finally {
 				permissionService.clearUserContext();
 			}
-		} catch(EntityException e) {
+		} catch(ObjectException e) {
 			return false;
 		} finally {
 			tenantService.clearCurrentTenant();
@@ -103,7 +103,7 @@ public class PasswordAuthenticator extends PasswordAuthenticationProvider {
 			}
 
 			return true;
-		} catch(EntityException e) {
+		} catch(ObjectException e) {
 			return false;
 		} catch(AccessDeniedException e) {
 			throw new IllegalStateException(e.getMessage(), e);

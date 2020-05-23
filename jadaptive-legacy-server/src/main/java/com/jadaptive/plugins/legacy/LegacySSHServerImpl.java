@@ -3,9 +3,7 @@ package com.jadaptive.plugins.legacy;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Map.Entry;
 import java.util.Properties;
 
 import org.slf4j.Logger;

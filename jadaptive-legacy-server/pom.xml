@@ -96,7 +96,7 @@
 		<repository>
 			<id>public-releases</id>
 			<name>artifactory.javassh.com-public-releases</name>
-			<url>http://artifactory.javassh.com/public-releases</url>
+			<url>https://artifactory.jadpative.com/public-releases</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
